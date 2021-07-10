@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    background: #E5F2E5;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+h3, h4 {
+    margin-block-end: 0.2em;
+}
+
+/* Custom File Input */
+#xml-input {
+color: transparent;
+}
+#xml-input::-webkit-file-upload-button {
+visibility: hidden;
+}
+#xml-input::before {
+content: 'Upload IOF-XML file';
+color: black;
+display: inline-block;
+background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+border: 1px solid #999;
+border-radius: 3px;
+padding: 5px 8px;
+outline: none;
+white-space: nowrap;
+-webkit-user-select: none;
+cursor: pointer;
+text-shadow: 1px 1px #fff;
+font-weight: 700;
+font-size: 10pt;
+}
+#xml-input:hover::before {
+border-color: black;
+}
+#xml-input:active {
+outline: 0;
+}
+#xml-input:active::before {
+background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}

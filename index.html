@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOF-XML to G-Punch</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.4/proj4.js" integrity="sha512-kxAsb9bx+VKR80fTYBRPm2QRw1EPLkmvXqc07A3rBmZd+W84nvVRyDMvDHDi0kJRSGe24n00392O7w6pOQOzpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="files/epsg_def.js"></script>
+    <script src="files/xml2json.js"></script>
+    <link rel="stylesheet" href="files/index.css">
+</head>
+<body>
+    <div class="page-container">
+        <h1>G-Punch Data Generator</h1>
+        <h3>Generate point and course data for <a href="https://landnavapp.com/">G-Punch Orientering (LandNav 2)</a> from IOF-XML data-exchange-files.</h3>
+        <br><hr>
+        <h2>Input</h2>
+        <form id="xml-form" name="xml-form">
+            <input id="xml-input" type="file">
+            <label>EPSG-code:</label>
+            <input id="epsg-input" type="text">
+            <input type="submit">
+        </form>
+        <br><hr>
+        <div class="output">
+            <h2>Output</h2>
+            <h3>Point data</h3>
+            <textarea id="point-data-output"></textarea>
+            <h3>Course data</h3>
+            <div id="course-data-insert"></div>
+        </div>
+    </div>
+    <script src="files/index.js"></script>
+</body>
+</html>
